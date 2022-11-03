@@ -1,0 +1,72 @@
+package method;
+interface pet{
+void leg();
+void name();
+
+}
+ abstract class animal{
+abstract void eat();
+ }
+ class spider extends animal{
+public void eat(){
+System.out.println("Spider eats insects.");
+}
+public void leg() {
+System.out.println("The animal wlaks by 8 legs");
+}
+ }
+ class cat extends animal implements pet{
+@Override
+public void leg() {
+System.out.println("This animal walks by 4 legs.");
+}
+
+@Override
+public void name() {
+System.out.println("This cat's name is MIMI");
+
+}
+@Override
+void eat() {
+System.out.println("Cat eats fish.");
+}
+}
+class fish extends animal implements pet{
+@Override
+public void leg() {
+System.out.println("Fish has no legs.");
+}
+
+@Override
+public void name() {
+System.out.println("Fish's name is mimi");
+
+}
+@Override
+void eat() {
+System.out.println("Fish eats plants. ");
+}
+}
+ 
+public class abstractdemo {
+
+public static void main(String[] args) {
+System.out.println("FISH");
+fish f1=new fish();
+f1.name();
+f1.eat();
+f1.leg();
+System.out.println("\n");
+System.out.println("CAT");
+cat c1=new cat();
+c1.name();
+c1.leg();
+c1.eat();
+System.out.println("\n");
+System.out.println("SPIDER");
+spider s1=new spider();
+s1.eat();
+s1.leg();
+}
+
+}
